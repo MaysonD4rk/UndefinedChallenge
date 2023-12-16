@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+/* eu tinha me esquecido de adicionar essa funcionalidade, mas juro que consumiu menos de 20min pra fazer*/
+
+        #sideBar{
+            width: 370px;
+            height: 100%;
+            background-color: white;
+            position: fixed;
+            z-index: 5;
+            font-size: 32px;
+            text-align: center;
+            box-shadow: 5px 5px 100px black;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: 0.5s;
+            left: -375px;
+        }
+        
+        #sideBar ul li{
+            padding: 10px;
+            transition: ease-in-out 0.2s;
+        }
+        #sideBar ul li:hover{
+            cursor: pointer;
+            background-color: rgba(226, 226, 226, 0.5);
+        }
+        .bottom-sidebar{
+            font-size: 24px;
+        }
+        #invisible-modal{
+            position: fixed;
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+
+    
+    <div id="navbar">
+        <div id="invisible-modal"></div>
+        <div id="sideBar">
+            <ul>
+                <li>Home</li>
+                <li>Ajuda</li>
+                <li>Sobre</li>
+            </ul>
+            <div class="bottom-sidebar">
+                <div>
+                    <i class="fa-solid fa-user"></i>
+                    <a href="">Entrar / Registrar</a>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="navbar-container">
+            <button onclick="openSideBar()" class="nav-icon"><i style="color: white;" class="fa-solid fa-bars"></i></button>
+            <div class="input-container">
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" placeholder="Digite aqui...">
+            </div>
+            <button class="nav-icon"><i  style="color: white;" class="fa-solid fa-cart-shopping"></i></button>
+        </div>
+
+        
+        
+    </div>
+
+    <div id="main-container">
+        
+        <div id="content">
+
+            <div class="upper-content">
+                
+                    <div style="font-size: 24px;font-weight: bold; margin-left: 10px;margin-top: 10px; margin-bottom: 10px;">Catálogo</div>
+                    
+                <div id="options-upbar">
+                    
+                    <div class="grid-btn">
+                        <button>
+                            <i class="fa-solid fa-list"></i>
+                        </button>
+                    </div>
+
+                    <div class="options">
+
+                        <a href="#"> Pastel para fritar </a>
+                        <a href="#" class="selected"> Marmitas </a>
+                        <a href="#"> Pão de queijo</a>
+                        <a href="#"> Hambúrguer </a>
+                        
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="food-choises">
+                
+            </div>
+
+            <div id="finish-ask">
+                
+                <p><span id="nProduto"></span> produtos selecionados</p>
+                <button class="finishButton"> Fechar pedido </button>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        Todos os direitos reservados & 2023
+    </footer>
+
+
+</body>
+
+<script src="https://kit.fontawesome.com/4fd5a3a7ad.js" crossorigin="anonymous"></script>
+
+
+<script src="script.js"></script>
+
+</html>
