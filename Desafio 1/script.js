@@ -145,7 +145,7 @@ function removeAll(index) {
 }
 
 
-/* eu tinha me esquecido de adicionar essa funcionalidade, mas juro que consumiu menos de 20min pra fazer*/
+/* eu tinha me esquecido de adicionar essa funcionalidade, mas juro que consumiu menos de 20min pra fazer 09/12/2023*/
 function openSideBar(){
     document.getElementById("sideBar").style.display = "flex";
     document.getElementById("invisible-modal").style.display = "initial";
